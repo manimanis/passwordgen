@@ -1,6 +1,88 @@
-$body-color: slateblue;
+$body-color: #fff;
+$back-color: #333;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 1em 0;
+}
 
 body {
+  background-color: $back-color;
   color: $body-color;
   font-family: sans-serif;
+}
+
+header {
+  background-color: #c7ff00;
+  color: #666;
+}
+
+header h1 {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
+}
+
+main {
+  margin: 8px;
+  min-height: calc(100vh - 4.5em - 80px);
+}
+
+footer {
+  padding: 10px 0;
+  background-color: #c7ff00;
+  color: #666;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.7em;
+}
+
+#pwd-options label {
+  display: block;
+  margin: 5px 0;
+}
+
+#pwd-length {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#pwd-length input {
+  width: 3em;
+  margin-left: 10px;
+}
+
+#pwd-gen {
+  margin: 15px 0;
+  text-align: center;
+}
+
+#pwd-gen button {
+  width: 100%;
+}
+
+#password {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #ccc;
+  padding: 5px 10px;
+  text-align: center;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  main {
+    width: 480px;
+    margin: auto auto;
+  }
 }

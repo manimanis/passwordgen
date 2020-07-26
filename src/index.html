@@ -6,17 +6,40 @@
   <title>Password Generator</title>
 </head>
 <body>
-  <h1>Password Generator</h1>
-  <form id="pwd-form">
-    <label for="chars-uppercase">
-      <input type="checkbox" name="uppercase" id="chars-uppercase" checked> Use uppercase letters
-    </label>
-    <label for="chars-digits">
-      <input type="checkbox" name="digits" id="chars-digits" checked> Use digits
-    </label>
-    <label for="chars-symbols">
-      <input type="checkbox" name="symbols" id="chars-symbols" checked> Use symbols
-    </label>
-  </form>
+  <header>
+    <h1>Password Generator</h1>
+  </header>
+  
+  <main>
+    <form id="pwd-form">
+      <p>Select the password strength and size:</p>
+      <div id="pwd-options">
+        <label for="chars-uppercase">
+          <input type="checkbox" name="uppercase" id="chars-uppercase" checked> Use uppercase letters
+        </label>
+        <label for="chars-digits">
+          <input type="checkbox" name="digits" id="chars-digits" checked> Use digits
+        </label>
+        <label for="chars-symbols">
+          <input type="checkbox" name="symbols" id="chars-symbols" checked> Use symbols
+        </label>
+      </div>
+      <div id="pwd-length">
+        <label for="pwd-size">Password size</label>
+        <input type="number" name="pwdsize" id="pwd-size" min="6" max="20" value="8">
+      </div>
+      <p>Then, generate a random password:</p>
+      <div id="pwd-gen">
+        <button>Generate Password</button>
+      </div>
+      <div id="pwd-pwd">
+        <input type="text" id="password" name="password" readonly>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <p>This page is a webpack practice exercice for the ALC GADS 2020 </p>
+    <p>&copy; Mohamed Anis MANI 2020</p>
+  </footer>
 </body>
 </html>
